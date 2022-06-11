@@ -1,3 +1,11 @@
+To download and install Compose standalone, run:
+curl -SL https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+https://docs.docker.com/compose/install/compose-plugin/#install-compose-on-windows-server
+--------------------------------------------------------------------------------------
+mkdir docker-compose
+cd docker-compose
+sudo nano docker-compose.yml
+
 version: '2'
 services:
   database:
