@@ -33,6 +33,7 @@ services:
     links:
     - backend
 -----------------------------------------------------------------------------
+goto frontend and in nginx give new backend container id
 command:
  sudo docker-compose up -d
 docker-compose up --build
