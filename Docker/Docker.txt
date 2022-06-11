@@ -25,6 +25,7 @@ sudo docker build -t database:database .
 ====for backend=====
 mkdir backend
 cd backend
+update the database settings.py file in github
 git clone https://github.com/Prarthana-git/new_chatapp.gi
 sudo cp new_chatapp/requirements.txt .
 sudo nano Dockerfile
