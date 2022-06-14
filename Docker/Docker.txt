@@ -74,6 +74,8 @@ CMD ["nginx", "-g", "daemon off;"]
 
 sudo docker build -t frontend:frontend_server .
 -----------------------------------------------------------------------------------------------
+Note:before creating frontend image run backend conatiner update nginx container backend id and then build frontend image
+-----------------------------------------------------------------------------------------------
 For normal production (on a server), use the default daemon on; directive so the Nginx server will start in the background. In this way Nginx and other services are running and talking to each other. One server runs many services.
 
 For Docker containers (or for debugging), the daemon off; directive tells Nginx to stay in the foreground. For containers this is useful as best practice is for one container = one process. One server (container) has only one service.
