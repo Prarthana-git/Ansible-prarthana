@@ -45,6 +45,15 @@ CMD python3 manage.py migrate
 ENTRYPOINT  python3 manage.py runserver 0.0.0.0:8000
 
 sudo docker build -t backend:backend .
+
+We use the -d flag to detach the container from our terminal and run it in the background.
+$sudo docker images
+frontend     frontend_server   ee7ed02e997f   17 minutes ago   168MB
+backend      backend           2146dcd51066   4 hours ago      965MB
+database     database          fcff2aa73258   5 hours ago      524MB
+Creating Docker Container:
+	sudo docker run -it --name backend -p 8000:8000 --link database -d d328ba8d2158
+	check on web browser paste docker ip:8000
 ------------------------------------------------------------------------------------
 ====for frontend====
 mkdir frontend
@@ -87,8 +96,6 @@ backend      backend           2146dcd51066   4 hours ago      965MB
 database     database          fcff2aa73258   5 hours ago      524MB
 Creating Docker Container:
 	sudo docker run -it --name database -d fcff2aa73258
-	sudo docker run -it --name backend -p 8000:8000 --link database -d d328ba8d2158
-check on webpage  publicip:8000
 	sudo docker run -it --name frontend -p 80:80 --link backend -d 693fd146f3df 
 	sudo docker ps
 	to get inside container
